@@ -2,7 +2,6 @@ import { createApp, h } from 'vue'
 import { createInertiaApp } from '@inertiajs/vue3'
 
 createInertiaApp({
-  page: JSON.parse(document.getElementById('app').dataset.page),
   resolve: name => {
     const pages = import.meta.glob('../pages/**/*.vue', { eager: true })
     return pages[`../pages/${name}.vue`]
@@ -12,4 +11,9 @@ createInertiaApp({
       .use(plugin)
       .mount(el)
   },
+  defaults: {
+    future: {
+      useScriptElementForInitialPage: true,
+    }
+  }
 })
