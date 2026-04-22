@@ -7,4 +7,7 @@ export default defineConfig({
     RubyPlugin(),
     vue()
   ],
+  legacy: {
+    skipWebSocketTokenCheck: true,
+  },
 })
