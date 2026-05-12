@@ -62,6 +62,6 @@ group :test do
 end
 
 gem "inertia_rails", "~> 3.21"
-gem "vite_rails", "~> 3.10"
+gem "vite_rails", "~> 3.11"
 
 gem "foreman", "~> 0.90.0"
